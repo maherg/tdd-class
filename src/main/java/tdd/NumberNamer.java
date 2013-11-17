@@ -4,16 +4,9 @@ public class NumberNamer {
 
     private final NumberNameRepository repository;
 
-    private String[] onesNames = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-    private String[] teensNames = { "", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
-            "eighteen", "nineteen" };
-    private String[] tensNames = { "", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty",
-            "ninety" };
     private int MILLION = 1000000;
     private int THOUSAND = 1000;
     private int HUNDRED = 100;
-    private int TEN = 10;
-    private int TWENTY = 20;
 
     public NumberNamer(NumberNameRepository repository) {
         this.repository = repository;
