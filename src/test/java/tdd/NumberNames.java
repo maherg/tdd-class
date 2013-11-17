@@ -25,7 +25,7 @@ class NumberNames {
         return "One";
     }
     
-    private final static Map<Integer,String> oneDigitMap= new HashMap<>();
+    private final static Map<Integer,String> oneDigitMap= new HashMap<Integer,String>();
     
     private static String readOneDigit(Integer digit)throws Exception{
         if(digit.toString().length()>1){
