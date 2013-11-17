@@ -1,16 +1,15 @@
 package tdd;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class NumberNamer {
 
-    private final NumberNameRepository repository;
+    @Autowired
+    private NumberNameRepository repository;
 
     private int MILLION = 1000000;
     private int THOUSAND = 1000;
     private int HUNDRED = 100;
-
-    public NumberNamer(NumberNameRepository repository) {
-        this.repository = repository;
-    }
 
     public String stringify(int number) {
         if (number >= MILLION) {
