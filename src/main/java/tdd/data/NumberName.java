@@ -20,6 +20,10 @@ public class NumberName {
     @Column
     private String name;
 
+    public NumberName() {
+
+    }
+
     public NumberName(int value, String name) {
         this.value = value;
         this.name = name;

@@ -37,7 +37,7 @@ public class PersistencePlaygroundTest {
         template.batchUpdate(new String[] { "CREATE TABLE numbers(ID INT PRIMARY KEY, NAME VARCHAR(255))",
                 "INSERT INTO numbers VALUES (1, 'maher')" });
 
-        NumberName user = template.queryForObject("SELECT * FROM people WHERE id = 1", rowMapper);
+        NumberName user = template.queryForObject("SELECT * FROM numbers WHERE id = 1", rowMapper);
 
         assertThat(user, is(notNullValue()));
         assertThat(user.getName(), is(equalTo("maher")));
