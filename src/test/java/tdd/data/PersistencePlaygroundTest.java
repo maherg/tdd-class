@@ -35,7 +35,7 @@ public class PersistencePlaygroundTest {
         };
 
         template.batchUpdate(new String[] { "CREATE TABLE numbers(ID INT PRIMARY KEY, NAME VARCHAR(255))",
-                "INSERT INTO people VALUES (1, 'maher')" });
+                "INSERT INTO numbers VALUES (1, 'maher')" });
 
         NumberName user = template.queryForObject("SELECT * FROM people WHERE id = 1", rowMapper);
 
