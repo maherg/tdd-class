@@ -3,11 +3,13 @@ package tdd;
 import java.io.IOException;
 import java.util.Properties;
 
-public class EnglishNumberNameRepository implements NumberNameRepository {
+import tdd.data.NumberName;
+
+public class PropertiesNumberNameRepositoryImpl implements NumberNameRepository {
 
     private Properties props = new Properties();
 
-    public EnglishNumberNameRepository() {
+    public PropertiesNumberNameRepositoryImpl() {
         try {
             props.load(getClass().getResourceAsStream("/numbers_en.properties"));
         } catch (IOException e) {
@@ -33,5 +35,10 @@ public class EnglishNumberNameRepository implements NumberNameRepository {
             return props.getProperty("million");
         }
         return "";
+    }
+
+    @Override
+    public void save(NumberName numberName) {
+        props.put(numberName.getValue(), numberName.getName());
     }
 }
